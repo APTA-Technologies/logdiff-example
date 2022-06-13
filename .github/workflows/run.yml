@@ -19,5 +19,7 @@ jobs:
 
       - name: Run logdiff
         uses: APTA-Technologies/logdiff
-        # with:
-        #   args: our args
+         with:
+           args:
+             - --ini=ini/alergia.ini
+             - 1_training.txt.dat
