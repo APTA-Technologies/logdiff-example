@@ -17,6 +17,10 @@ jobs:
         run: |
           /bin/bash test.sh
 
+      - name: Modify filesystem permissions
+        run: |
+          chmod a+w .
+
       - name: Run logdiff
         uses: APTA-Technologies/logdiff@v1
         with:
@@ -26,7 +30,7 @@ jobs:
       - name: ls
         run: |
           ls -lah
-          
+
       - name: upload result
         uses: actions/upload-artifact@v3
         with:
