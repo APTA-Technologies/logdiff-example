@@ -1,0 +1,23 @@
+name: Run logdiff on simple test data
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-tests-and-logdiff:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run the tests
+        run: |
+          /bin/bash test.sh
+
+      - name: Run logdiff
+        uses: APTA-Technologies/logdiff
+        # with:
+        #   args: our args
