@@ -12,14 +12,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Run the tests
         run: |
           /bin/bash test.sh
+
       - name: Run logdiff
         uses: APTA-Technologies/logdiff@v1
         with:
           tracefile: 1_training.txt.dat
           inifile: alergia.ini
+
+      - name: ls
+        run: |
+          ls -lah
+          
       - name: upload result
         uses: actions/upload-artifact@v3
         with:
