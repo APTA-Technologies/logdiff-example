@@ -18,7 +18,8 @@ jobs:
       - name: Run logdiff
         uses: APTA-Technologies/logdiff@v1
         with:
-          who-to-greet: 1_training.txt.dat
+          tracefile: 1_training.txt.dat
+          inifile: alergia.ini
       - name: upload result
         uses: actions/upload-artifact@v3
         with:
