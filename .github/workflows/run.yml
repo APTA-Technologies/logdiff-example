@@ -22,6 +22,7 @@ jobs:
           chmod a+w .
 
       - name: Run logdiff
+        id: logdiff
         uses: APTA-Technologies/logdiff@v1
         with:
           tracefile: 1_training.txt.dat
@@ -34,5 +35,7 @@ jobs:
       - name: upload result
         uses: actions/upload-artifact@v3
         with:
-          name: 'result'
-          path: '1_training.txt.dat.ff.final.json'
+          name: 'results'
+          path: |
+            '1_training.txt.dat.ff.final.json'
+            ${{ steps.logdiff.outputs.resultfile }}
