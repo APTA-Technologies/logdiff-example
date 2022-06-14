@@ -25,7 +25,7 @@ jobs:
         uses: APTA-Technologies/logdiff@v1
         with:
           tracefile: 1_training.txt.dat
-          inifile: alergia.ini
+          inifile: edsm.ini
 
       - name: ls
         run: |
