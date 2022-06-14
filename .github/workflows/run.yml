@@ -37,5 +37,5 @@ jobs:
         with:
           name: 'results'
           path: |
-            '1_training.txt.dat.ff.final.json'
+            1_training.txt.dat.ff.final.json
             ${{ steps.logdiff.outputs.resultfile }}
