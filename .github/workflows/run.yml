@@ -27,6 +27,7 @@ jobs:
         with:
           tracefile: 1_training.txt.dat
           inifile: edsm.ini
+          apitoken: ${{ secrets.LOGDIFF_API_KEY }}
 
       - name: ls
         run: |
